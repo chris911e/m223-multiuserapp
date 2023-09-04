@@ -59,7 +59,7 @@ public class Booking {
         return user;
     }
 
-    public void setUser_idfk(User user) {
+    public void setUser(User user) {
         this.user = user;
     }
 
