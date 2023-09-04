@@ -15,8 +15,8 @@ public class BookingService {
     EntityManager entityManager;
 
     @Transactional
-    public Booking createBooking(Booking entry) {
-        return entityManager.merge(entry);
+    public Booking createBooking(Booking booking) {
+        return entityManager.merge(booking);
     }
 
     @Transactional
@@ -26,9 +26,9 @@ public class BookingService {
     }
 
     @Transactional
-    public Booking updateBooking(Long id, Booking entry) {
-        entry.setId(id);
-        return entityManager.merge(entry);
+    public Booking updateBooking(Long id, Booking booking) {
+        booking.setId(id);
+        return entityManager.merge(booking);
     }
 
     public List<Booking> findAll() {
