@@ -2,14 +2,7 @@ package ch.zli.m223.model;
 
 import javax.persistence.*;
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
-
-import com.aayushatharva.brotli4j.common.annotations.Local;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import java.time.LocalDateTime;
-import java.util.Set;
 
 @Entity
 public class Booking {
@@ -18,9 +11,8 @@ public class Booking {
     @Schema (readOnly = true)
     private Long id;
 
-    //fk
-    @Column(nullable = false)
-    private Long desk_id;
+    @ManyToOne
+    private Desk desk_id;
 
     @Column(nullable = false)
     private LocalDateTime startedAt;
@@ -28,7 +20,8 @@ public class Booking {
     @Column(nullable = false)
     private LocalDateTime endedAt;
 
-    // User fk
+    @ManyToOne
+    private User user_idfk;
 
     public Long getId() {
         return id;
@@ -36,14 +29,6 @@ public class Booking {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Long getDeskId() {
-        return desk_id;
-    }
-
-    public void setDeskId(Long desk_id) {
-        this.desk_id = desk_id;
     }
 
     public LocalDateTime getStartedAt() {
@@ -60,6 +45,22 @@ public class Booking {
 
     public void setEndedAt(LocalDateTime endedAt) {
         this.endedAt = endedAt;
+    }
+
+    public Desk getDesk_id() {
+        return desk_id;
+    }
+
+    public void setDesk_id(Desk desk_id) {
+        this.desk_id = desk_id;
+    }
+
+    public User getUser_idfk() {
+        return user_idfk;
+    }
+
+    public void setUser_idfk(User user_idfk) {
+        this.user_idfk = user_idfk;
     }
 
 }

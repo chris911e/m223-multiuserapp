@@ -2,14 +2,7 @@ package ch.zli.m223.model;
 
 import javax.persistence.*;
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
-
-import com.aayushatharva.brotli4j.common.annotations.Local;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import java.time.LocalDateTime;
-import java.util.Set;
 
 
 @Entity
@@ -19,7 +12,8 @@ public class Punished {
     @Schema (readOnly = true)
     private Long id;
 
-    //user fk
+    @ManyToOne
+    private User user_idfk;
 
     @Column(nullable = false)
     private LocalDateTime startedAt;
@@ -41,6 +35,14 @@ public class Punished {
 
     public void setEndedAt(LocalDateTime endedAt) {
         this.endedAt = endedAt;
+    }
+
+    public User getUser_idfk() {
+        return user_idfk;
+    }
+
+    public void setUser_idfk(User user_idfk) {
+        this.user_idfk = user_idfk;
     }
 
 }
