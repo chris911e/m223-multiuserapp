@@ -11,24 +11,16 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.time.LocalDateTime;
 import java.util.Set;
 
+
 @Entity
-public class Booking {
+public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Schema (readOnly = true)
     private Long id;
 
-    //fk
     @Column(nullable = false)
-    private Long desk_id;
-
-    @Column(nullable = false)
-    private LocalDateTime startedAt;
-
-    @Column(nullable = false)
-    private LocalDateTime endedAt;
-
-    // User fk
+    private String role;
 
     public Long getId() {
         return id;
@@ -38,28 +30,14 @@ public class Booking {
         this.id = id;
     }
 
-    public Long getDeskId() {
-        return desk_id;
+    public String getRole() {
+        return role;
     }
 
-    public void setDeskId(Long desk_id) {
-        this.desk_id = desk_id;
+    public void setRole(String role) {
+        this.role = role;
     }
 
-    public LocalDateTime getStartedAt() {
-        return startedAt;
-    }
 
-    public void setStartedAt(LocalDateTime startedAt) {
-        this.startedAt = startedAt;
-    }
-
-    public LocalDateTime getEndedAt() {
-        return endedAt;
-    }
-
-    public void setEndedAt(LocalDateTime endedAt) {
-        this.endedAt = endedAt;
-    }
-
+    
 }
