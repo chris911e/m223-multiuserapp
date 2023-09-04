@@ -12,7 +12,7 @@ public class Booking {
     private Long id;
 
     @ManyToOne
-    private Desk desk_id;
+    private Desk desk;
 
     @Column(nullable = false)
     private LocalDateTime startedAt;
@@ -21,7 +21,7 @@ public class Booking {
     private LocalDateTime endedAt;
 
     @ManyToOne
-    private User user_idfk;
+    private User user;
 
     public Long getId() {
         return id;
@@ -47,20 +47,20 @@ public class Booking {
         this.endedAt = endedAt;
     }
 
-    public Desk getDesk_id() {
-        return desk_id;
+    public Desk getDesk() {
+        return desk;
     }
 
-    public void setDesk_id(Desk desk_id) {
-        this.desk_id = desk_id;
+    public void setDesk(Desk desk) {
+        this.desk = desk;
     }
 
-    public User getUser_idfk() {
-        return user_idfk;
+    public User getUser() {
+        return user;
     }
 
-    public void setUser_idfk(User user_idfk) {
-        this.user_idfk = user_idfk;
+    public void setUser_idfk(User user) {
+        this.user = user;
     }
 
 }

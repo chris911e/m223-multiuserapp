@@ -13,7 +13,7 @@ public class Punished {
     private Long id;
 
     @ManyToOne
-    private User user_idfk;
+    private User user;
 
     @Column(nullable = false)
     private LocalDateTime startedAt;
@@ -37,12 +37,12 @@ public class Punished {
         this.endedAt = endedAt;
     }
 
-    public User getUser_idfk() {
-        return user_idfk;
+    public User getUser() {
+        return user;
     }
 
-    public void setUser_idfk(User user_idfk) {
-        this.user_idfk = user_idfk;
+    public void setUser(User user) {
+        this.user = user;
     }
 
 }
