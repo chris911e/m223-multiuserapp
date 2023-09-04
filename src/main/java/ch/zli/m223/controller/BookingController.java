@@ -2,6 +2,8 @@ package ch.zli.m223.controller;
 
 import java.util.List;
 
+import javax.annotation.security.PermitAll;
+import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
 import javax.validation.Valid;
 import javax.ws.rs.Consumes;
@@ -21,6 +23,7 @@ import ch.zli.m223.model.Booking;
 import ch.zli.m223.service.BookingService;
 
 @Path("/booking")
+@PermitAll
 @Tag(name = "Booking", description = "Handling of booking")
 public class BookingController {
 
@@ -28,6 +31,7 @@ public class BookingController {
     BookingService bookingService;
 
     @GET
+    // @RolesAllowed("Admin")
     @Produces(MediaType.APPLICATION_JSON)
     @Operation(summary = "Index all booking.", description = "Returns a list of all booking.")
     public List<Booking> index() {
@@ -36,6 +40,7 @@ public class BookingController {
 
     @Path("/status/{id}")
     @GET
+    // @RolesAllowed({"Admin", "User"})
     @Produces(MediaType.APPLICATION_JSON)
     @Operation(summary = "Index booking by ID.", description = "Returns a single booking by its id.")
     public Booking get(@PathParam("id") Long id) {
@@ -43,6 +48,7 @@ public class BookingController {
     }
 
     @POST
+    // @RolesAllowed({"Admin", "User"})
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     @Operation(summary = "Creates a new booking.", description = "Creates a new boking and returns the newly added booking.")
@@ -52,6 +58,7 @@ public class BookingController {
 
     @Path("/delete/{id}")
     @DELETE
+    // @RolesAllowed({"Admin", "User"})
     @Operation(summary = "Deletes a booking.", description = "Deletes a booking by its id.")
     public void delete(@PathParam("id") Long id) {
         bookingService.deleteBooking(id);
@@ -59,6 +66,7 @@ public class BookingController {
 
     @Path("/put/{id}")
     @PUT
+    // @RolesAllowed({"Admin", "User"})
     @Operation(summary = "Updates a booking.", description = "Updates a booking by its id.")
     public Booking update(@PathParam("id") Long id, @Valid Booking entry) {
         return bookingService.updateBooking(id, entry);

@@ -5,6 +5,9 @@ import org.eclipse.microprofile.openapi.annotations.media.Schema;
 import java.time.LocalDateTime;
 
 @Entity
+@NamedQueries({
+    @NamedQuery(name = "User.findByEmail", query = "SELECT u FROM User u WHERE u.e_mail = :email")
+})
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -84,6 +87,5 @@ public class User {
     public void setRole(Role role) {
         this.role = role;
     }
-
 
 }

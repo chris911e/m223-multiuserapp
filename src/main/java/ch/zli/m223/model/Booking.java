@@ -5,6 +5,9 @@ import org.eclipse.microprofile.openapi.annotations.media.Schema;
 import java.time.LocalDateTime;
 
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "Booking.findById", query = "SELECT u FROM Booking u WHERE u.user = :id")
+})
 public class Booking {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
