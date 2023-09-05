@@ -58,6 +58,7 @@ public class BookingController {
     @Operation(summary = "Deletes a booking.", description = "Deletes a booking by its id.")
     public void delete(@PathParam("id") Long id) {
         bookingService.deleteBooking(id);
+
     }
 
     @Path("/put/{id}")
