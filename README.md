@@ -1,65 +1,36 @@
-# m223_multiuserapp
+# m223_multiuserapp 
+A m223 project.
+## Co-Work API Description
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
-If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
+A Rest API written in Java with the Quarkus Framework. An API for a Co-Working Space Application, which handles users, bookings, logins, roles and various QoL features.
 
-## Running the application in dev mode
+> **_NOTE:_** A Co-Working Space is an arrangement in which workers for different companies share an office space
 
-You can run your application in dev mode that enables live coding using:
+https://github.com/chris911e/m223-multiuserapp
+
+## Running the application
+
+1. First clone the repository on your local machine with:
 ```shell script
-./mvnw compile quarkus:dev
+git clone https://github.com/chris911e/m223-multiuserapp.git
 ```
 
-> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
+2. Open the project in VSCode and reopen with the given Container with `Ctrl + Shift + P` and press on the option for `Dev Containers` to build and reopen the Container.
 
-## Packaging and running the application
+3. Reload the window with `Ctrl + Shift + P` and press on the option `Reload Window` to install Maven dependencies after reload.
 
-The application can be packaged using:
+4. Start the application with
 ```shell script
-./mvnw package
-```
-It produces the `quarkus-run.jar` file in the `target/quarkus-app/` directory.
-Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/quarkus-app/lib/` directory.
-
-The application is now runnable using `java -jar target/quarkus-app/quarkus-run.jar`.
-
-If you want to build an _über-jar_, execute the following command:
-```shell script
-./mvnw package -Dquarkus.package.type=uber-jar
+./mvnw quarkus:dev
 ```
 
-The application, packaged as an _über-jar_, is now runnable using `java -jar target/*-runner.jar`.
+5. Access the API via `localhost:8080` and click on `Co-Work API` to open swagger and test out the endpoints the API offers.
 
-## Creating a native executable
+## Login with example user
 
-You can create a native executable using: 
-```shell script
-./mvnw package -Dnative
-```
-
-Or, if you don't have GraalVM installed, you can run the native executable build in a container using: 
-```shell script
-./mvnw package -Dnative -Dquarkus.native.container-build=true
-```
-
-You can then execute your native executable with: `./target/m223_multiuserapp-1.0.0-runner`
-
-If you want to learn more about building native executables, please consult https://quarkus.io/guides/maven-tooling.
-
-## Provided Code
-
-### RESTEasy Reactive
-
-Easily start your Reactive RESTful Web Services
-
-[Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
-
-### Automatic Test Data
-
-Automatic test data is automatically injected whenever you start the application in development at /service/TestDataService.java
-
-### Example User; Adminn
+1. Under `/login` user this user to authorize yourself to all endpoints.
+```json
   {
     "id": 2,
     "f_name": "Emily",
@@ -72,3 +43,11 @@ Automatic test data is automatically injected whenever you start the application
     },
     "createdAt": "2023-09-05T06:25:24.311242"
   }
+```
+  
+## Automatic Test Data
+
+Automatic test data is **automatically** injected whenever you start the application in development&test at `/service/TestDataService.java` for dev or at `/test/.../TestDataService.java`
+
+## Disclaimer
+You may most likely encounter bugs. 

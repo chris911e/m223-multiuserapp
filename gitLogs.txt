@@ -1,0 +1,83 @@
+commit b8ce6c8ca482707c65c8a5f0a7f3c82799bc3b7b
+Author: Christopher Scheel <christopherscheel99@gmail.com>
+Date:   Tue Sep 5 12:03:01 2023 +0000
+
+    Added testing
+
+commit 1883af3edf78cf5de884ca96b1f38a6600abc8d8
+Author: Christopher Scheel <christopherscheel99@gmail.com>
+Date:   Tue Sep 5 08:28:32 2023 +0000
+
+    Fixed jwt authentication
+
+commit b776c5746fede7f5d76da84d2a1524e8f99b5a56
+Author: Christopher Scheel <christopherscheel99@gmail.com>
+Date:   Mon Sep 4 21:48:34 2023 +0000
+
+    added auth
+
+commit 47ea0dc458c1670d67ec3fcfc34ce6c176f9fc6d
+Author: Christopher Scheel <christopherscheel99@gmail.com>
+Date:   Mon Sep 4 13:25:43 2023 +0000
+
+    added user endpoint
+
+commit 9f8dbab5b62a74aecee4607fce46b853c76d6105
+Author: Christopher Scheel <christopherscheel99@gmail.com>
+Date:   Mon Sep 4 12:35:54 2023 +0000
+
+    Fixed Database + Booking endpoint
+
+commit 6e16520a86220a42fc23d2ed26f5d96ea6d0b24d
+Author: Christopher Scheel <christopherscheel99@gmail.com>
+Date:   Mon Sep 4 11:35:03 2023 +0000
+
+    Fixed ReadMe
+
+commit 898335f9da20a57acd7d1d37d79b1861edb7c896
+Author: Christopher Scheel <christopherscheel99@gmail.com>
+Date:   Mon Sep 4 11:33:25 2023 +0000
+
+    Added Automatic test data
+
+commit c5108d74c4f379e2be0a1e9b9bfcaf2e3a555437
+Author: Christopher Scheel <christopherscheel99@gmail.com>
+Date:   Mon Sep 4 11:02:23 2023 +0000
+
+    small fix
+
+commit eb3a1172dca1ac73fbe2a8588d52c4d3ced6b543
+Author: Christopher Scheel <christopherscheel99@gmail.com>
+Date:   Mon Sep 4 10:53:13 2023 +0000
+
+    Fixed relations
+
+commit c41c3a0d95f492737eef44f3aff118cb6e8efb26
+Author: Christopher Scheel <christopherscheel99@gmail.com>
+Date:   Mon Sep 4 09:36:31 2023 +0000
+
+    Added relations
+
+commit 7e90b3f47384f6c73a9197c84cdad78cc2c541f8
+Author: Christopher Scheel <christopherscheel99@gmail.com>
+Date:   Mon Sep 4 08:26:52 2023 +0000
+
+    added Entities
+
+commit 08da6fde69039dc502b640c3a921bbdeafc34d90
+Author: Christopher Scheel <christopherscheel99@gmail.com>
+Date:   Mon Sep 4 06:43:43 2023 +0000
+
+    Added structure
+
+commit 61e4f8c83b14792977bd09b78aa4e2e02d76790c
+Author: Christopher Scheel <christopherscheel99@gmail.com>
+Date:   Mon Sep 4 06:37:06 2023 +0000
+
+    Initial commit
+
+commit 834233e3d048d78b1041a696dce80cf167d2b8f2
+Author: christopher <90184668+chris911e@users.noreply.github.com>
+Date:   Sun Sep 3 17:38:48 2023 +0200
+
+    Initial commit
