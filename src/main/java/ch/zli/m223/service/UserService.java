@@ -24,9 +24,8 @@ public class UserService {
     @Transactional
     public void deleteUser(Long id) {
         var entity = entityManager.find(User.class, id);
-        var constraints = entityManager.createNamedQuery("Booking.findById", Booking.class).setParameter("user", id).getResultStream().findFirst();
+        entityManager.remove(entityManager.createNamedQuery("Booking.findById", Booking.class).setParameter("id", id).getResultStream().findFirst());
         entityManager.remove(entity);
-        entityManager.remove(constraints);
     }
 
     @Transactional
@@ -49,7 +48,7 @@ public class UserService {
     public Optional<User> findByEmail(String email) {
         return entityManager
                 .createNamedQuery("User.findByEmail", User.class)
-                .setParameter("e_mail", email)
+                .setParameter("email", email)
                 .getResultStream()
                 .findFirst();
     }

@@ -2,6 +2,8 @@ package ch.zli.m223.model;
 
 import javax.persistence.*;
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
+
+
 import java.time.LocalDateTime;
 
 @Entity
@@ -23,7 +25,7 @@ public class Booking {
     @Column(nullable = false)
     private LocalDateTime endedAt;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private User user;
 
     public Long getId() {

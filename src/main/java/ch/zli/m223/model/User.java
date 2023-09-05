@@ -2,6 +2,8 @@ package ch.zli.m223.model;
 
 import javax.persistence.*;
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
+
+
 import java.time.LocalDateTime;
 
 @Entity
@@ -26,7 +28,7 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Role role;
 
     @Column(nullable = false)

@@ -58,3 +58,17 @@ Easily start your Reactive RESTful Web Services
 ### Automatic Test Data
 
 Automatic test data is automatically injected whenever you start the application in development at /service/TestDataService.java
+
+### Example User; Adminn
+  {
+    "id": 2,
+    "f_name": "Emily",
+    "l_name": "Kol",
+    "e_mail": "emily9898@exmaple.ch",
+    "password": "password",
+    "role": {
+      "id": 2,
+      "role": "Admin"
+    },
+    "createdAt": "2023-09-05T06:25:24.311242"
+  }

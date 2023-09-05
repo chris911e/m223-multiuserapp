@@ -37,7 +37,7 @@ public class jwtService {
             .build();
       }
     } catch (Exception e) {
-      System.err.println("Couldn't validate password.");
+      System.err.println(e);
     }
 
     return Response.status(Response.Status.FORBIDDEN).build();

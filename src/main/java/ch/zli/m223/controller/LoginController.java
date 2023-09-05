@@ -25,7 +25,7 @@ public class LoginController {
 
   @POST
   @Consumes(MediaType.APPLICATION_JSON)
-  @Operation(summary = "Authenticate a user.", description = "Returns a token upon successful authentication.")
+  @Operation(summary = "Authenticate an user.", description = "Returns a token upon successful authentication.")
   public Response create(@Valid User user) {
     return this.jwtservice.generateJWT(user);
   }
